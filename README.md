@@ -1,4 +1,4 @@
-# Yellow Pages Business Details Scraper
+# Yellow Pages Business Details Scraper - with Batch File
 
 Yellowpages.com Web Scraper written in Python and LXML to extract business details available based on a particular category and location.
 
@@ -54,4 +54,14 @@ This will create a csv file:
 
 [Sample Output](https://raw.githubusercontent.com/scrapehero/yellow_pages/master/restaurants-boston-yellowpages-scraped-data.csv)
  
+## Changes
+
+yp_batch.bat - uses a list of common yellow page categories and uses the scraper to get all companies in my city, which can be changed by you. Then it merges all of that into
+a file named "companies_mmddyyy.csv"
+
+## Goals
+
+My goal is to create a list of local business websites I can use as a source for a job scraper, to have my own way of finding new job leads in my area.
+
+Then I can search indeed, glassdoor, linkedin, to apply.
  
