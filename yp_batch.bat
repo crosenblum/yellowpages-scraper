@@ -6,6 +6,7 @@ rem craig m. rosenblum
 rem set variables
 set categories=Accountants,Architects,Attorneys,Auto Repair Shops,Banks,Beauty Salons,Car Dealerships,Caterers,Clothing Stores,Computer Repair Services,Contractors,Daycare Centers,Dentists,Doctors,Dry Cleaners,Electricians,Fitness Centers,Florists,Furniture Stores,Garden Centers,Grocery Stores,Hair Salons,Hardware Stores,Home Improvement Stores,Hotels,Insurance Agents,Jewelry Stores,Landscapers,Locksmiths,Notaries,Pest Control Services,Pet Grooming,Photographers,Plumbers,Printers,Real Estate Agents,Restaurants,Towing Services,Travel Agencies,Veterinarians
 set first=1
+set location=Burnsville,MN
 
 rem loop thru each category
 for %%a in (%categories%) do (
@@ -14,7 +15,7 @@ for %%a in (%categories%) do (
 	echo -[ %%a ]-
 	
 	rem download all data for this category in burnsville
-	python yellow_pages.py %%a Burnsville,MN >nul 2>&1
+	python yellow_pages.py %%a %location% >nul 2>&1
 	
 	rem rename files for my purposes
 	rem category-location-yellowpages-scraped-data.csv
